@@ -12,8 +12,8 @@ using RabbitMQAnimal.API.Data;
 namespace RabbitMQAnimal.API.Migrations
 {
     [DbContext(typeof(AnimalDbContext))]
-    [Migration("20240128162642_init")]
-    partial class init
+    [Migration("20240129141340_initdb")]
+    partial class initdb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -250,41 +250,41 @@ namespace RabbitMQAnimal.API.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Animal");
+                    b.ToTable("Animals");
 
                     b.HasData(
                         new
                         {
-                            Id = new Guid("6eb019c9-b435-4aea-815b-7bc9cfe90b8d"),
+                            Id = new Guid("90daf38a-3213-4015-a407-1739cf1849ce"),
                             Age = 2,
                             Breed = "Double doodle",
                             Color = "White",
                             CoverImageUrl = "https://placedog.net/500",
-                            CreatedAt = new DateTime(2024, 1, 28, 16, 26, 42, 183, DateTimeKind.Utc).AddTicks(2542),
+                            CreatedAt = new DateTime(2024, 1, 29, 14, 13, 39, 820, DateTimeKind.Utc).AddTicks(9308),
                             Description = "lorem ipsum",
                             Name = "Dee Dee",
                             PublicId = 1,
                             Sex = "Female",
                             Status = 0,
                             Type = "Dog",
-                            UpdatedAt = new DateTime(2024, 1, 28, 16, 26, 42, 183, DateTimeKind.Utc).AddTicks(2542),
+                            UpdatedAt = new DateTime(2024, 1, 29, 14, 13, 39, 820, DateTimeKind.Utc).AddTicks(9308),
                             Weight = 10
                         },
                         new
                         {
-                            Id = new Guid("3d8af2ef-6007-49e7-b7f4-57dcd771eaaa"),
+                            Id = new Guid("3e860b6a-4b74-4219-a8e1-7adeb86944e7"),
                             Age = 5,
                             Breed = "Bengal cat",
                             Color = "Beige",
                             CoverImageUrl = "https://placekitten.com/200/200",
-                            CreatedAt = new DateTime(2024, 1, 28, 16, 26, 42, 183, DateTimeKind.Utc).AddTicks(2573),
+                            CreatedAt = new DateTime(2024, 1, 29, 14, 13, 39, 820, DateTimeKind.Utc).AddTicks(9364),
                             Description = "lorem ipsum",
                             Name = "Buttercup",
                             PublicId = 2,
                             Sex = "Male",
                             Status = 0,
                             Type = "Cat",
-                            UpdatedAt = new DateTime(2024, 1, 28, 16, 26, 42, 183, DateTimeKind.Utc).AddTicks(2574),
+                            UpdatedAt = new DateTime(2024, 1, 29, 14, 13, 39, 820, DateTimeKind.Utc).AddTicks(9365),
                             Weight = 5
                         });
                 });

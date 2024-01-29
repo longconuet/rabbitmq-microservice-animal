@@ -5,12 +5,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace RabbitMQAnimal.API.Migrations
 {
-    public partial class init : Migration
+    public partial class initdb : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Animal",
+                name: "Animals",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -30,7 +30,7 @@ namespace RabbitMQAnimal.API.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Animal", x => x.Id);
+                    table.PrimaryKey("PK_Animals", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -105,14 +105,14 @@ namespace RabbitMQAnimal.API.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "Animal",
+                table: "Animals",
                 columns: new[] { "Id", "Age", "Breed", "Color", "CoverImageUrl", "CreatedAt", "Description", "Name", "PublicId", "Sex", "Status", "Type", "UpdatedAt", "Weight" },
-                values: new object[] { new Guid("3d8af2ef-6007-49e7-b7f4-57dcd771eaaa"), 5, "Bengal cat", "Beige", "https://placekitten.com/200/200", new DateTime(2024, 1, 28, 16, 26, 42, 183, DateTimeKind.Utc).AddTicks(2573), "lorem ipsum", "Buttercup", 2, "Male", 0, "Cat", new DateTime(2024, 1, 28, 16, 26, 42, 183, DateTimeKind.Utc).AddTicks(2574), 5 });
+                values: new object[] { new Guid("3e860b6a-4b74-4219-a8e1-7adeb86944e7"), 5, "Bengal cat", "Beige", "https://placekitten.com/200/200", new DateTime(2024, 1, 29, 14, 13, 39, 820, DateTimeKind.Utc).AddTicks(9364), "lorem ipsum", "Buttercup", 2, "Male", 0, "Cat", new DateTime(2024, 1, 29, 14, 13, 39, 820, DateTimeKind.Utc).AddTicks(9365), 5 });
 
             migrationBuilder.InsertData(
-                table: "Animal",
+                table: "Animals",
                 columns: new[] { "Id", "Age", "Breed", "Color", "CoverImageUrl", "CreatedAt", "Description", "Name", "PublicId", "Sex", "Status", "Type", "UpdatedAt", "Weight" },
-                values: new object[] { new Guid("6eb019c9-b435-4aea-815b-7bc9cfe90b8d"), 2, "Double doodle", "White", "https://placedog.net/500", new DateTime(2024, 1, 28, 16, 26, 42, 183, DateTimeKind.Utc).AddTicks(2542), "lorem ipsum", "Dee Dee", 1, "Female", 0, "Dog", new DateTime(2024, 1, 28, 16, 26, 42, 183, DateTimeKind.Utc).AddTicks(2542), 10 });
+                values: new object[] { new Guid("90daf38a-3213-4015-a407-1739cf1849ce"), 2, "Double doodle", "White", "https://placedog.net/500", new DateTime(2024, 1, 29, 14, 13, 39, 820, DateTimeKind.Utc).AddTicks(9308), "lorem ipsum", "Dee Dee", 1, "Female", 0, "Dog", new DateTime(2024, 1, 29, 14, 13, 39, 820, DateTimeKind.Utc).AddTicks(9308), 10 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_InboxState_Delivered",
@@ -152,7 +152,7 @@ namespace RabbitMQAnimal.API.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Animal");
+                name: "Animals");
 
             migrationBuilder.DropTable(
                 name: "InboxState");
